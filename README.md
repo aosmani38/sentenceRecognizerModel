@@ -1,7 +1,8 @@
 # Handwritten sentence recognition with TensorFlow
 ## Usage:
 1. In command line, run  
-```pip install -r requirements.txt```
+```pip install -r requirements.txt```  
+Note: If training model, also install tensorflow (ver 2.13 worked)
 
 2. Create a Datasets folder, put IAM_Sentences datasets in folder
 

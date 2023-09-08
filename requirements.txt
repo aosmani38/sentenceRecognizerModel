@@ -7,4 +7,4 @@ Pillow>=9.4.0
 onnxruntime>=1.15.0  # onnxruntime-gpu for GPU support
 librosa>=0.9.2
 matplotlib
-mltu==0.1.7
+mltu==1.1.0

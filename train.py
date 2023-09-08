@@ -83,11 +83,12 @@ train_data_provider.augmentors = [
     ]
 
 # # Creating TensorFlow model architecture
-# model = train_model(
-#     input_dim = (configs.height, configs.width, 3),
-#     output_dim = len(configs.vocab),
-# )
-model = tf.keras.models.load_model("./Models/04_sentence_recognition/202309021820/model.h5", compile=False)
+model = train_model(
+    input_dim = (configs.height, configs.width, 3),
+    output_dim = len(configs.vocab),
+)
+# # IF LOADING A PREVIOUSLY TRAINED MODEL, UNCOMMENT BELOW, COMMENT ABOVE
+# model = tf.keras.models.load_model("./Models/04_sentence_recognition/202309021820/model.h5", compile=False)
 
 # # Compile the model and print summary
 model.compile(

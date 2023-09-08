@@ -31,15 +31,16 @@ if __name__ == "__main__":
     from tqdm import tqdm
     from mltu.configs import BaseModelConfigs
 
+    model_number = 202309022119
     configs = BaseModelConfigs.load(
-        "Models/04_sentence_recognition/202309022119/configs.yaml"
+        f"Models/04_sentence_recognition/{model_number}/configs.yaml"
     )
-    configs.model_path = "Models/04_sentence_recognition/202309022119/model.onnx"
+    configs.model_path = f"Models/04_sentence_recognition/{model_number}/model.onnx"
 
     model = ImageToWordModel(model_path=configs.model_path, char_list=configs.vocab)
 
     df = pd.read_csv(
-        "Models/04_sentence_recognition/202309022119/val.csv"
+        f"Models/04_sentence_recognition/{model_number}/val.csv"
     ).values.tolist()
 
     accum_cer, accum_wer = [], []
